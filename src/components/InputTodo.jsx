@@ -11,12 +11,19 @@ const style = {
 // このスタイルの書き方が正しいというわけではないが、こういう記述もある
 
 export const InputTodo = (props) => {
-  const { todoText, onChange, onClick } = props;
+  const { todoText, onChange, onClick, disabled } = props;
   return (
-    <div style={style}>
-      <input placeholder="TODOを入力" value={todoText} onChange={onChange} />
+    <div disabled style={style}>
+      <input
+        disabled={disabled}
+        placeholder="TODOを入力"
+        value={todoText}
+        onChange={onChange}
+      />
       {/* inputの値を取り出したいので、入力したvalueをStateとして定義した */}
-      <button onClick={onClick}>追加</button>
+      <button disabled={disabled} onClick={onClick}>
+        追加
+      </button>
     </div>
   );
 };

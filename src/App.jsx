@@ -62,8 +62,14 @@ export const App = () => {
         todoText={todoText}
         onChange={onChangeTodoText}
         onClick={onClickAdd}
+        disabled={incompleteTodos.length >= 5}
       />
       {/* props名は自分で決めていい */}
+      {incompleteTodos.length >= 5 && (
+        <p style={{ color: "red" }}>登録できるtodoは5個まで</p>
+      )}
+      {/* lengthは配列の要素数を返す関数 */}
+
       <IncompleteTodos
         todos={incompleteTodos}
         onClickComplete={onClickComplete}
