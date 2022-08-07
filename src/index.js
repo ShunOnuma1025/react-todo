@@ -5,6 +5,7 @@ import ReactDOM from "react-dom";
 // htmlにコンポーネントを反映させる
 
 import { App } from "./App";
+// 通常のexportにしたのでブラケットで囲む
 
 ReactDOM.render(<App />, document.getElementById("root"));
 // ReactDOMというライブラリの中身のrenderという関数を使用する
