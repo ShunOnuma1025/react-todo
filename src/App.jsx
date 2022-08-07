@@ -3,8 +3,9 @@ import "./styles.css";
 
 export const App = () => {
   return (
-    <div>
+    <>
       <p>表示されますか？</p>
-    </div>
+    </>
   );
+  // JSX記法は1つのタグで囲わないといけない
 };
