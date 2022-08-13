@@ -4,6 +4,7 @@ import "./styles.css";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
 import { CompleteTodos } from "./components/CompleteTodos";
+import { NextPage } from "./components/NextPage";
 
 export const App = () => {
   const [todoText, setTodoText] = useState("");
@@ -76,6 +77,8 @@ export const App = () => {
         onClickDelete={onClickDelete}
       />
       <CompleteTodos todos={completeTodos} onClickBack={onClickBack} />
+
+      <NextPage />
     </>
   );
   // JSX記法は1つのタグで囲わないといけない
