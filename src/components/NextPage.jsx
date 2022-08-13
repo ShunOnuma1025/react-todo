@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Home = () => {
+export const NextPage = () => {
   return (
     <div>
       <h1>Home</h1>

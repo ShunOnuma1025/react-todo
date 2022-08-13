@@ -1,5 +1,6 @@
 // コンポーネントの拡張子にはjsxを付ける
 import React, { useState } from "react";
+import { BrowserRouter, Link, Switch, Route, Routes } from "react-router-dom";
 import "./styles.css";
 import { InputTodo } from "./components/InputTodo";
 import { IncompleteTodos } from "./components/IncompleteTodos";
@@ -78,7 +79,12 @@ export const App = () => {
       />
       <CompleteTodos todos={completeTodos} onClickBack={onClickBack} />
 
-      <NextPage />
+      <BrowserRouter>
+        <Link to="/nextpage">ページ遷移</Link>
+        <Routes>
+          <Route path="/nextpage" element={<NextPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
   // JSX記法は1つのタグで囲わないといけない
